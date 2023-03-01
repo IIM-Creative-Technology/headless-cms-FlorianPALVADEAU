@@ -1,19 +1,18 @@
 <template>
-  <div v-if="projects">
+  <div v-if="projets">
       <h1>Hello World</h1>
-      <nuxt-link :to="`/projects/${project.slug}`" v-for="project in projects.data">
-          {{ project.short_name }}
+      <nuxt-link :to="`/projets/${projet.slug}`" v-for="projet in projets.data">
+          {{ projet.short_name }}
       </nuxt-link>
   </div>
 </template>
 
 <script setup>
 const { find } = useStrapi()
-const projects = ref()
+const projets = ref()
 
 onMounted(async () => {
-  projects.value = await find('projects', {populate: 'deep'})
-  console.log(projects);
+  projets.value = await find('projets', {populate: 'deep'})
 })
 
 </script>
