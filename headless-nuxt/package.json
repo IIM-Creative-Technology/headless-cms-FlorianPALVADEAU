@@ -12,6 +12,8 @@
     "@nuxtjs/strapi": "^1.8.1",
     "@types/node": "^18.14.1",
     "markdown-it": "^13.0.1",
-    "nuxt": "^3.2.2"
+    "nuxt": "^3.2.2",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0"
   }
 }
