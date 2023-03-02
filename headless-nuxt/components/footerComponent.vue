@@ -1,16 +1,16 @@
 <template>
     <footer className="Footer">
-        <nuxtLink :to="`/`" className='navLink'>florian-palvadeau.com</nuxtLink>
+        <a href="https://florian-palvadeau.com" className='navLink'>florian-palvadeau.com</a>
         <div className="navBar">
             <nuxtLink :to="`/contact`">Contact</nuxtLink>
             <nuxtLink :to="`/`">Home</nuxtLink>
             <nuxtLink :to="`/projets`">Projects</nuxtLink>
         </div>
         <div className="icons">
-            <nuxtLink :to="`https://github.com/FlorianPALVADEAU`" target="_blank" rel="noreferrer"><img src="../assets/github_icon.png" alt="github_icon"/></nuxtLink>
-            <nuxtLink :to="`https://www.instagram.com/flo.plvd/?hl=fr`" target="_blank" rel="noreferrer"><img src="../assets/instagram_icon.png" alt="instagram_icon"/></nuxtLink>
-            <nuxtLink :to="`https://www.linkedin.com/in/florian-palvadeau/`" target="_blank" rel="noreferrer"><img src="../assets/linkedin_icon.png" alt="linkedin_icon"/></nuxtLink>
-            <nuxtLink :to="`#`" target="_blank" rel="../assets/CV_PALVADEAU_FLORIAN.pdf"><img src="../assets/cv_icon.png" alt="cv_icon" className="cv_icon"/></nuxtLink>
+            <a href="https://github.com/FlorianPALVADEAU" target="_blank" rel="noreferrer"><img src="../assets/github_icon.png" alt="github_icon"/></a>
+            <a href="https://www.instagram.com/flo.plvd/?hl=fr" target="_blank" rel="noreferrer"><img src="../assets/instagram_icon.png" alt="instagram_icon"/></a>
+            <a href="https://www.linkedin.com/in/florian-palvadeau/" target="_blank" rel="noreferrer"><img src="../assets/linkedin_icon.png" alt="linkedin_icon"/></a>
+            <a href="../assets/CV_PALVADEAU_FLORIAN.pdf" target="_blank" rel="../assets/CV_PALVADEAU_FLORIAN.pdf"><img src="../assets/cv_icon.png" alt="cv_icon" className="cv_icon"/></a>
         </div>
     </footer>
 </template>
@@ -82,7 +82,7 @@
                 transition: width 0.3s ease 0s, left 0.3s ease 0s;
                 width: 0;
               }
-            a:hover:after, a.selected:after {
+              a:hover:after, a.selected:after {
                 width: 100%; 
                 left: 0; 
             }
@@ -94,6 +94,133 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: nowrap;
+        }
+    }
+
+    @media screen and (max-width: 1550px) {
+    body{
+        .Footer{
+            height: 80px;
+            justify-content: space-around;
+            align-items: center;
+            a{
+                color: $text-color;
+                text-decoration: none;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+                .cv_icon{
+                    transform: scale(1.14);
+                }
+            }
+            .navLink{
+                font-size: 14px;
+            }
+            .navBar{
+                width: 25%;
+                cursor: pointer;
+                a{
+                    padding: 10px 10px;
+                }
+                a:after {    
+                    height: 1px;
+                    left: 50%;
+                }
+            }
+            .icons{
+                width: 10%;
+                height: 100%;
+            }
+        }
+    }
+    }
+    @media screen and (max-width: 1370px) {
+        body{
+            .Footer{
+                height: 80px;
+                justify-content: space-around;
+                align-items: center;
+                a{
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .cv_icon{
+                        transform: scale(1.14);
+                    }
+                }
+                .navLink{
+                    font-size: 12px;
+                }
+                .navBar{
+                    width: 30%;
+                    cursor: pointer;
+                    a{
+                        padding: 10px 10px;
+                    }
+                    a:after {    
+                        height: 1px;
+                        left: 50%;
+                    }
+                }
+                .icons{
+                    width: 12%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        body{
+            .Footer{
+                height: 120px;
+                justify-content: center;
+                a{
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .cv_icon{
+                        transform: scale(1.14);
+                    }
+                }
+                .navLink{
+                    font-size: 14px;
+                }
+                .navBar{
+                    font-size: 16px;
+                    margin-left: 12vw;
+                    margin-right: 12vw;
+                    width: 30%;
+                    a{
+                        padding: 10px 10px;
+                    }
+                    a:after {    
+                        height: 1px;
+                        left: 50%;
+                    }
+                }
+                .icons{
+                    width: 14%;
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        html, body{
+            box-sizing: border-box;
+            overflow-x: hidden;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            .Footer{
+                .navLink{ display: none; }
+                .navBar{ width: 100%; }
+                .icons{ display: none; }
+            }
         }
     }
 </style>

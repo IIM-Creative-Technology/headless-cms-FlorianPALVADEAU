@@ -1,7 +1,6 @@
 <template>
-  <nav>
+  <HeaderComponent/>
 
-  </nav>
   <main role="main">
     <slot />
   </main>

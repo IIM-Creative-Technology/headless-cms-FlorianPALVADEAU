@@ -2,7 +2,6 @@
     <div v-if="projets">
         <h1>Projets</h1>
         <nuxt-link :to="`/projets/${projet.slug}`" v-for="projet in filteredProjects">
-            
             {{ projet.short_name }}
         </nuxt-link>
     </div>
