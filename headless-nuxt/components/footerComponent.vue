@@ -1,23 +1,23 @@
 <template>
-    <footer className="Footer">
-        <a href="https://florian-palvadeau.com" className='navLink'>florian-palvadeau.com</a>
-        <div className="navBar">
+    <footer class="Footer">
+        <a href="https://florian-palvadeau.com" class='navLink'>florian-palvadeau.com</a>
+        <div class="navBar">
             <nuxtLink :to="`/contact`">Contact</nuxtLink>
             <nuxtLink :to="`/`">Home</nuxtLink>
-            <nuxtLink :to="`/projets`">Projects</nuxtLink>
+            <nuxtLink :to="`/projects-page`">Projects</nuxtLink>
         </div>
-        <div className="icons">
+        <div class="icons">
             <a href="https://github.com/FlorianPALVADEAU" target="_blank" rel="noreferrer"><img src="../assets/github_icon.png" alt="github_icon"/></a>
             <a href="https://www.instagram.com/flo.plvd/?hl=fr" target="_blank" rel="noreferrer"><img src="../assets/instagram_icon.png" alt="instagram_icon"/></a>
             <a href="https://www.linkedin.com/in/florian-palvadeau/" target="_blank" rel="noreferrer"><img src="../assets/linkedin_icon.png" alt="linkedin_icon"/></a>
-            <a href="../assets/CV_PALVADEAU_FLORIAN.pdf" target="_blank" rel="../assets/CV_PALVADEAU_FLORIAN.pdf"><img src="../assets/cv_icon.png" alt="cv_icon" className="cv_icon"/></a>
+            <a href="../assets/CV_PALVADEAU_FLORIAN.pdf" target="_blank" rel="../assets/CV_PALVADEAU_FLORIAN.pdf"><img src="../assets/cv_icon.png" alt="cv_icon" class="cv_icon"/></a>
         </div>
     </footer>
 </template>
 
 <script setup></script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
     $background-color: #EDF2FB;
     $border-color: #ABC4FF;
     $text-color: #1E202B;
@@ -98,42 +98,42 @@
     }
 
     @media screen and (max-width: 1550px) {
-    body{
-        .Footer{
-            height: 80px;
-            justify-content: space-around;
-            align-items: center;
-            a{
-                color: $text-color;
-                text-decoration: none;
-                img{
-                    width: 30px;
-                    height: 30px;
-                }
-                .cv_icon{
-                    transform: scale(1.14);
-                }
-            }
-            .navLink{
-                font-size: 14px;
-            }
-            .navBar{
-                width: 25%;
-                cursor: pointer;
+        body{
+            .Footer{
+                height: 80px;
+                justify-content: space-around;
+                align-items: center;
                 a{
-                    padding: 10px 10px;
+                    color: $text-color;
+                    text-decoration: none;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .cv_icon{
+                        transform: scale(1.14);
+                    }
                 }
-                a:after {    
-                    height: 1px;
-                    left: 50%;
+                .navLink{
+                    font-size: 14px;
                 }
-            }
-            .icons{
-                width: 10%;
-                height: 100%;
+                .navBar{
+                    width: 25%;
+                    cursor: pointer;
+                    a{
+                        padding: 10px 10px;
+                    }
+                    a:after {    
+                        height: 1px;
+                        left: 50%;
+                    }
+                }
+                .icons{
+                    width: 10%;
+                    height: 100%;
+                }
             }
         }
-    }
     }
     @media screen and (max-width: 1370px) {
         body{

@@ -1,5 +1,5 @@
 <template>
-    <header class="Header">
+    <div class="Header">
         <div class="headerCircle">
             <div class='headerDesc'>
                 <h1>Hello.</h1>
@@ -34,10 +34,10 @@
                 </g>
             </svg>
         </div>
-    </header>
+    </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
     $background-color: #EDF2FB;
     $border-color: #ABC4FF;
     $text-color: #1E202B;
